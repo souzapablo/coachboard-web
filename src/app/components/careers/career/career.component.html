@@ -1,0 +1,18 @@
+<div class="career ff-roboto-mono">
+  <p class="manager-name">{{ career.manager }}</p>
+  <p class="team-name">{{ career.currentTeam }}</p>
+  <p class="last-update">
+    {{ career.lastUpdate | date }}
+  </p>
+  <div class="actions">
+    <button class="play-button">
+      <img src="/assets/play.svg" alt="Play icon" />
+    </button>
+    <button
+      class="delete-button"
+      routerLink="/careers/delete-career/{{ career.id }}"
+    >
+      <img src="/assets/delete.svg" alt="Trash can icon" />
+    </button>
+  </div>
+</div>

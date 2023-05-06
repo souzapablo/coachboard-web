@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #003b1f;
+  --primary-color-light: #a6ddc2;
+  --primary-color-lighter: #d7f8e8;
+  --white: #ffffff;
+  --danger: #9c0b0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ff-inter {
+  font-family: "Inter", sans-serif;
+}
+.ff-roboto-mono {
+  font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.header {
+  margin: 1rem auto 2rem;
+}
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.button {
+  background: var(--primary-color);
+  color: var(--white);
+  max-width: 270px;
+  width: 250px;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.button:hover {
+  border: 2px solid var(--primary-color-light);
+  background-color: var(--primary-color-light);
+}
+
+.button__disabled {
+  background: #7a7f87;
+  color: var(--white);
+  max-width: 270px;
+  width: 250px;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 2px solid #c4c4c4;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}

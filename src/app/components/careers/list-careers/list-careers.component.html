@@ -1,0 +1,19 @@
+<section class="container">
+  <header class="header d-flex">
+    <h2 class="ff-inter">
+      <img src="/assets/coach.svg" alt="Ícone do treinador" />
+      Careers
+    </h2>
+    <button routerLink="/create-career" class="button">Add career</button>
+  </header>
+  <div class="list" *ngIf="careers.length > 0; else noCareer">
+    <div *ngFor="let career of careers">
+      <cb-career [career]="career"></cb-career>
+    </div>
+  </div>
+</section>
+<ng-template #noCareer>
+  <div class="ff-inter no-careers">
+    <p>No careers registered yet</p>
+  </div>
+</ng-template>

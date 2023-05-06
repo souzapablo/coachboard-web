@@ -1,0 +1,63 @@
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.button {
+  margin: 5px;
+  margin-top: 70px;
+  width: 200px;
+}
+
+.create-career {
+  padding: 2rem 0;
+}
+
+.create-career form {
+  background: var(--primary-color-light);
+  border: none;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+.create-career form label {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.create-career form .input {
+  border: none;
+  height: 40px;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.create-career form .text {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.error__message {
+  font-weight: 700;
+  font-size: 12px;
+  margin-left: 5px;
+  color: var(--danger);
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
+
+.button__disabled {
+  margin: 5px;
+  margin-top: 70px;
+  width: 200px;
+}

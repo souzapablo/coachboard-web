@@ -3,16 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CreateCareerComponent } from './components/careers/create-career/create-career.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListCareersComponent } from './components/careers/list-careers/list-careers.component';
+import { CareerComponent } from './components/careers/career/career.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DeleteCareerComponent } from './components/careers/delete-career/delete-career.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    CreateCareerComponent,
+    ListCareersComponent,
+    CareerComponent,
+    DeleteCareerComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

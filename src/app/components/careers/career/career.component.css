@@ -1,0 +1,47 @@
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.play-button {
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.delete-button {
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.career {
+  background-color: #f8f9fe;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 262px;
+}
+
+.career .manager-name {
+  font-weight: 700;
+  margin: 1rem auto;
+  word-wrap: break-word;
+}
+
+.career .last-update {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 75%;
+}
+
+img {
+  align-self: right;
+}
+
+@media screen and (max-width: 426px) {
+  .career-p {
+    width: 100%;
+  }
+}

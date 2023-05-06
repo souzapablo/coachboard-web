@@ -1,0 +1,44 @@
+<section class="container create-career ff-inter">
+  <header class="header">
+    <h2>Create a new career</h2>
+  </header>
+  <form [formGroup]="form">
+    <label for="manager-name">Manager name</label>
+    <input
+      type="text"
+      class="input"
+      id="manager-name"
+      formControlName="manager-name"
+      placeholder="Enter the manager name..."
+      formControlName="managerName"
+    />
+    <div
+      class="error__message"
+      *ngIf="form.get('managerName')?.errors?.['required']&& form.get('managerName')?.touched"
+    >
+      Manager name is required
+    </div>
+    <div
+      class="error__message"
+      *ngIf="form.get('managerName')?.errors?.['minlength'] && form.get('managerName')?.touched"
+    >
+      Manager name must have at least 3 characters
+    </div>
+
+    <label for="initial-team">Initial team</label>
+    <select formControlName="teamName">
+      <option value=" " selected>Select a team</option>
+      <option value="Brighton">Brighton & Hove Albion</option>
+    </select>
+    <div class="actions">
+      <button
+        [ngClass]="enableButton()"
+        [disabled]="!form.valid"
+        (click)="createCareer()"
+      >
+        Create
+      </button>
+      <button (click)="cancel()" class="button">Cancel</button>
+    </div>
+  </form>
+</section>
