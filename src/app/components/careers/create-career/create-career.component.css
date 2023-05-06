@@ -16,7 +16,7 @@
 }
 
 .create-career form {
-  background: var(--primary-color-light);
+  background: var(--background-primary-color);
   border: none;
   border-radius: 20px;
 

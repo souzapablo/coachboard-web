@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { PaginationResult } from 'src/shared/paginationResult';
 import { CareerDetails } from './interfaces/careerDetails';
 import { CreateCareer } from './interfaces/createCareer';
@@ -13,8 +13,15 @@ export class CareerService {
   private readonly BASE_URL = 'https://localhost:7144/api/v1/careers';
   constructor(private http: HttpClient) {}
 
-  list(): Observable<PaginationResult<Career>> {
-    return this.http.get<PaginationResult<Career>>(`${this.BASE_URL}/user/1`);
+  list(page: number, manager: string): Observable<PaginationResult<Career>> {
+    let params = new HttpParams().set('page', page);
+
+    if (manager.trim().length > 0) {
+      params = params.set('managerName', manager);
+    }
+    return this.http.get<PaginationResult<Career>>(`${this.BASE_URL}/user/1`, {
+      params,
+    });
   }
 
   create(createCareer: CreateCareer) {

@@ -1,0 +1,6 @@
+<div class="center" *ngIf="hasMoreData; else noMoreData">
+  <button class="load-more button">Load next</button>
+</div>
+<ng-template #noMoreData>
+  <p class="message-center ff-inter">No more data to load</p>
+</ng-template>

@@ -1,5 +1,16 @@
 <section class="container">
   <header class="header d-flex">
+    <div class="search-careers">
+      <input
+        type="search"
+        class="filter"
+        placeholder="Search the manager"
+        autofocus
+        [(ngModel)]="filter"
+        (keyup)="searchCareer()"
+      />
+      <img src="/assets/search.svg" alt="" />
+    </div>
     <h2 class="ff-inter">
       <img src="/assets/coach.svg" alt="Ícone do treinador" />
       Careers
@@ -12,8 +23,9 @@
     </div>
   </div>
 </section>
+<cb-load-next [hasMoreData]="hasMoreData" (click)="loadNext()"> </cb-load-next>
 <ng-template #noCareer>
-  <div class="ff-inter no-careers">
+  <div class="ff-inter no-career">
     <p>No careers registered yet</p>
   </div>
 </ng-template>

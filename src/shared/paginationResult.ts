@@ -3,5 +3,6 @@ export interface PaginationResult<T> {
   totalPages: number;
   pageSize: number;
   itemsCount: number;
+  isLastPage: boolean;
   data: T[];
 }

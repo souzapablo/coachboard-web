@@ -1,6 +1,6 @@
 <section class="container create-career ff-inter">
   <header class="header">
-    <h2>Create a new career</h2>
+    <h2>Create a new career {{ form.errors }}</h2>
   </header>
   <form [formGroup]="form">
     <label for="manager-name">Manager name</label>
@@ -27,7 +27,7 @@
 
     <label for="initial-team">Initial team</label>
     <select formControlName="teamName">
-      <option value=" " selected>Select a team</option>
+      <option value="default" selected>Select a team</option>
       <option value="Brighton">Brighton & Hove Albion</option>
     </select>
     <div class="actions">

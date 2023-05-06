@@ -11,6 +11,7 @@ import { ListCareersComponent } from './components/careers/list-careers/list-car
 import { CareerComponent } from './components/careers/career/career.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DeleteCareerComponent } from './components/careers/delete-career/delete-career.component';
+import { LoadNextComponent } from './components/load-next/load-next.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DeleteCareerComponent } from './components/careers/delete-career/delete
     ListCareersComponent,
     CareerComponent,
     DeleteCareerComponent,
+    LoadNextComponent,
   ],
   imports: [
     BrowserModule,

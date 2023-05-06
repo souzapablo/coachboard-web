@@ -2,7 +2,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 import { CareerService } from '../career.service';
 import { Router } from '@angular/router';
-import { CreateCareer } from '../interfaces/createCareer';
+import { teamInListValidator } from './teamInListValidator';
 
 @Component({
   selector: 'cb-create-career',
@@ -29,7 +29,7 @@ export class CreateCareerComponent {
           Validators.minLength(3),
         ]),
       ],
-      teamName: ['', [Validators.pattern(/(.|\s)*\S(.|\s)*/)]],
+      teamName: ['default', [teamInListValidator]],
     });
   }
 

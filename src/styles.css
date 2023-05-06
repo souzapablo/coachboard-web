@@ -7,8 +7,10 @@
 
 :root {
   --primary-color: #003b1f;
-  --primary-color-light: #a6ddc2;
+  --primary-color-light: #3bad76;
+  --background-primary-color: #acdbc4;
   --primary-color-lighter: #d7f8e8;
+  --primary-color-lightest: #ecf8f2;
   --white: #ffffff;
   --danger: #9c0b0b;
 }
