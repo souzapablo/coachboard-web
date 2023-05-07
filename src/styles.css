@@ -55,6 +55,7 @@ h2 {
 }
 
 .button {
+  cursor: pointer;
   background: var(--primary-color);
   color: var(--white);
   max-width: 270px;
@@ -81,6 +82,15 @@ h2 {
   border: 2px solid #c4c4c4;
   border-radius: 10px;
   transition: 0.5s ease;
+}
+
+.error__message {
+  font-weight: 700;
+  font-size: 12px;
+  margin-left: 5px;
+  color: var(--danger);
+  margin-top: -25px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 576px) {

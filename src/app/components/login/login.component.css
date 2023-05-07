@@ -1,0 +1,95 @@
+.login {
+  padding: 1rem 0;
+}
+
+.login form {
+  background: var(--background-primary-color);
+  border: none;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+.login form label {
+  align-self: center;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.login form .input {
+  border: none;
+  height: 20px;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.login form .text {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.register {
+  padding-top: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.register:hover {
+  color: var(--primary-color-light);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+p {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.error__message {
+  align-self: center;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 480px;
+  }
+}
+@media (min-width: 992px) {
+  .button {
+    width: 25%;
+  }
+  .container {
+    width: 480px;
+  }
+
+  .login form .input {
+    width: 50%;
+    align-self: center;
+  }
+}
+@media (min-width: 1200px) {
+  .button {
+    width: 25%;
+  }
+  .container {
+    width: 480px;
+  }
+
+  .login form .input {
+    width: 50%;
+    align-self: center;
+  }
+}

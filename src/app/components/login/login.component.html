@@ -1,0 +1,52 @@
+<section class="container login ff-inter">
+  <h2 class="header">Welcome back!</h2>
+
+  <form [formGroup]="form">
+    <label for="nickname">Nickname</label>
+    <input
+      type="text"
+      class="input"
+      id="nickname"
+      placeholder="Enter your nickname..."
+      formControlName="nickname"
+    />
+    <div
+      class="error__message"
+      *ngIf="form.get('nickname')?.errors?.['required']&& form.get('nickname')?.touched"
+    >
+      Nickname is required
+    </div>
+    <div
+      class="error__message"
+      *ngIf="form.get('nickname')?.errors?.['minlength'] && form.get('nickname')?.touched"
+    >
+      Nickname must have at least 3 characters
+    </div>
+    <label for="">Password</label>
+    <input
+      type="password"
+      class="input"
+      id="password"
+      placeholder="Enter your password..."
+      formControlName="password"
+    />
+    <div
+      class="error__message"
+      *ngIf="form.get('password')?.errors?.['required']&& form.get('password')?.touched"
+    >
+      Password is required
+    </div>
+    <div
+      class="error__message"
+      *ngIf="form.get('password')?.errors?.['minlength'] && form.get('password')?.touched"
+    >
+      Password must have at least 3 characters
+    </div>
+    <button [ngClass]="enableButton()" (click)="login()" class="button">
+      Login
+    </button>
+
+    <p>Are you new here?</p>
+    <p class="register">Sing up.</p>
+  </form>
+</section>

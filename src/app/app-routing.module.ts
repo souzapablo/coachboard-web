@@ -3,24 +3,26 @@ import { CreateCareerComponent } from './components/careers/create-career/create
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListCareersComponent } from './components/careers/list-careers/list-careers.component';
+import { LoginComponent } from './components/login/login.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'list-careers',
-    pathMatch: 'full',
+    component: ListCareersComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'create-career',
     component: CreateCareerComponent,
   },
   {
-    path: 'list-careers',
-    component: ListCareersComponent,
-  },
-  {
     path: 'careers/delete-career/:id',
     component: DeleteCareerComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
 

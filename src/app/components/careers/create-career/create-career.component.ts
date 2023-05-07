@@ -20,7 +20,7 @@ export class CreateCareerComponent {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      userId: [1],
+      userId: [localStorage.getItem('userId')],
       managerName: [
         '',
         Validators.compose([
@@ -36,13 +36,13 @@ export class CreateCareerComponent {
   createCareer() {
     if (this.form.valid) {
       this.service.create(this.form.value).subscribe(() => {
-        this.router.navigate(['/list-careers']);
+        this.router.navigate(['']);
       });
     }
   }
 
   cancel() {
-    this.router.navigate(['/list-careers']);
+    this.router.navigate(['']);
   }
 
   enableButton(): string {

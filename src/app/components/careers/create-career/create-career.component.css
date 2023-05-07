@@ -47,17 +47,19 @@
   margin: 0.5rem 0 2rem;
 }
 
-.error__message {
-  font-weight: 700;
-  font-size: 12px;
-  margin-left: 5px;
-  color: var(--danger);
-  margin-top: -25px;
-  margin-bottom: 20px;
-}
-
 .button__disabled {
   margin: 5px;
   margin-top: 70px;
   width: 200px;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 50%;
+  }
 }

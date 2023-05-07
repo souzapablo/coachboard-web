@@ -5,13 +5,17 @@ import { CareerDetails } from './interfaces/careerDetails';
 import { CreateCareer } from './interfaces/createCareer';
 import { Career } from './interfaces/career';
 import { Observable } from 'rxjs';
+import { BASE_URL } from 'src/shared/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CareerService {
-  private readonly BASE_URL = 'https://localhost:7144/api/v1/careers';
-  constructor(private http: HttpClient) {}
+  private readonly PATH = `${BASE_URL}/careers`;
+  userId: string;
+  constructor(private http: HttpClient) {
+    this.userId = localStorage.getItem('userId') || '';
+  }
 
   list(page: number, manager: string): Observable<PaginationResult<Career>> {
     let params = new HttpParams().set('page', page);
@@ -19,21 +23,24 @@ export class CareerService {
     if (manager.trim().length > 0) {
       params = params.set('managerName', manager);
     }
-    return this.http.get<PaginationResult<Career>>(`${this.BASE_URL}/user/1`, {
-      params,
-    });
+    return this.http.get<PaginationResult<Career>>(
+      `${this.PATH}/user/${this.userId}`,
+      {
+        params,
+      }
+    );
   }
 
   create(createCareer: CreateCareer) {
-    return this.http.post(this.BASE_URL, createCareer);
+    return this.http.post(this.PATH, createCareer);
   }
 
   delete(id: number) {
-    return this.http.delete(`${this.BASE_URL}/${id}`);
+    return this.http.delete(`${this.PATH}/${id}`);
   }
 
   getById(id: number): Observable<CareerDetails> {
-    const url = `${this.BASE_URL}/${id}`;
+    const url = `${this.PATH}/${id}`;
     return this.http.get<CareerDetails>(url);
   }
 }
