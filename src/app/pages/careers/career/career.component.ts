@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Career } from '../interfaces/career';
+import { Career } from 'src/app/shared/interfaces/careers/career';
 
 @Component({
   selector: 'cb-career',
@@ -9,8 +9,8 @@ import { Career } from '../interfaces/career';
 export class CareerComponent {
   @Input() career: Career = {
     id: 0,
-    manager: 'Jorge Sampaoli',
-    currentTeam: 'Flamengo',
+    manager: '',
+    currentTeam: '',
     lastUpdate: new Date(),
   };
 }

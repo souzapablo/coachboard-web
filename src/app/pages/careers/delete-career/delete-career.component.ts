@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CareerService } from '../career.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CareerDetails } from '../interfaces/careerDetails';
+import { CareerDetails } from 'src/app/shared/interfaces/careers/careerDetails';
 
 @Component({
   selector: 'cb-delete-career',

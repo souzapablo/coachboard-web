@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CareerService } from '../career.service';
-import { Career } from '../interfaces/career';
+import { Career } from '../../../shared/interfaces/careers/career';
 
 @Component({
   selector: 'cb-list-careers',

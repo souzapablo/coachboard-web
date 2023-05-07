@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BASE_URL } from 'src/shared/constants';
-import { LoginInput, LoginResponse } from './login';
 import { Observable } from 'rxjs';
+import { BASE_URL } from 'src/app/shared/constants';
+import { LoginInput } from 'src/app/shared/interfaces/login/loginInput';
+import { LoginResponse } from 'src/app/shared/interfaces/login/loginResponse';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +23,9 @@ export class LoginService {
   }
 
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('loggedIn');
+    return (
+      !!localStorage.getItem('loggedIn') &&
+      localStorage.getItem('loggedIn') == 'true'
+    );
   }
 }

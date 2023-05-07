@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { PaginationResult } from 'src/shared/paginationResult';
-import { CareerDetails } from './interfaces/careerDetails';
-import { CreateCareer } from './interfaces/createCareer';
-import { Career } from './interfaces/career';
+import { Career } from '../../shared/interfaces/careers/career';
 import { Observable } from 'rxjs';
-import { BASE_URL } from 'src/shared/constants';
+import { BASE_URL } from 'src/app/shared/constants';
+import { PaginationResult } from 'src/app/shared/paginationResult';
+import { CreateCareer } from 'src/app/shared/interfaces/careers/createCareer';
+import { CareerDetails } from 'src/app/shared/interfaces/careers/careerDetails';
 
 @Injectable({
   providedIn: 'root',
